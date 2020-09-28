@@ -11,7 +11,18 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun testIncrement() {
+        val counter = Counter()
+        assertEquals(0, counter.value)
+        counter.increment()
+        assertEquals(1, counter.value)
+    }
+
+    @Test
+    fun testDecrement() {
+        val counter = Counter()
+        assertEquals(0, counter.value)
+        counter.decrement()
+        assertEquals(-1, counter.value)
     }
 }
